@@ -1,0 +1,38 @@
+# Ignore all node_modules everywhere
+**/node_modules/
+
+# Logs
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+
+# Environment files
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Build output (for React/Next/Vite/etc.)
+**/dist/
+**/build/
+**/.next/
+**/.nuxt/
+**/out/
+**/.svelte-kit/
+
+# Temporary caches
+**/.turbo/
+**/.cache/
+**/.vite/
+**/.parcel-cache/
+**/.eslintcache
+
+# IDE/editor stuff
+**/.vscode/
+**/.idea/
+**/*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
