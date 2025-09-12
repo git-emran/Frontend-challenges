@@ -1,18 +1,21 @@
-import { Bilbo } from "next/font/google";
 import { useState } from "react";
 
-export default function Folder({ explorer }) {
+export default function Folder({ handleInsertFolder = () => {}, explorer }) {
   const [expand, setExpand] = useState(false);
   const [showInput, setShowInput] = useState({
     visible: false,
     isFolder: null,
   });
 
-  const addFolder = () => {};
+  const addFolder = (e) => {
+    if (e.keyCode === 13 && e.target.value) {
+      handleInsertFolder(explorer.id, e.target.value, showInput.isFolder);
+      setShowInput({ ...showInput, visible: false });
+    }
+  };
 
   const handleFolder = (e, isFolder) => {
     e.stopPropagation();
-
     setExpand(true);
     setShowInput({
       visible: true,
@@ -39,6 +42,7 @@ export default function Folder({ explorer }) {
             <div>
               <span>{showInput.isFolder ? "📁" : "📄"}</span>
               <input
+                onKeyDown={addFolder}
                 type="text"
                 onBlur={() => setShowInput({ ...showInput, visible: false })}
                 autoFocus
@@ -46,7 +50,13 @@ export default function Folder({ explorer }) {
             </div>
           )}
           {explorer.items.map((item) => {
-            return <Folder explorer={item} />;
+            return (
+              <Folder
+                key={item.id}
+                handleInsertFolder={handleInsertFolder}
+                explorer={item}
+              />
+            );
           })}
         </div>
       </div>
