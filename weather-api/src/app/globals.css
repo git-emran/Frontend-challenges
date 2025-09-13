@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+body {
+  @apply min-h-screen mx-auto justify-center grid place-items-center;
+}
+
+.search-box {
+  @apply flex px-2 my-6 bg-slate-300/30 gap-6 w-fit rounded-lg py-2 justify-between items-center text-gray-600;
+}
+
+.button {
+  @apply bg-slate-300/50 shadow-md p-2 rounded-md;
+}
+
+.container {
+  @apply bg-amber-100/30 p-20 flex flex-col items-center justify-center text-center rounded-md;
+}
