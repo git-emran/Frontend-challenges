@@ -1,0 +1,37 @@
+body {
+  display: grid;
+  place-items: center;
+  max-width: 100vh;
+  justify-items: center;
+  align-content: center;
+}
+
+.input {
+  padding: 6px;
+  width: 30rem;
+}
+
+.results {
+  max-width: 30rem;
+  margin-top: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 6px;
+  border-color: black;
+  gap: 6px;
+  border-style: solid;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.result:hover {
+  background-color: beige;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
