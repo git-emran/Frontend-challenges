@@ -1,0 +1,81 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  display: grid;
+  place-items: center;
+  margin: 10rem;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.input {
+  padding: 2px;
+}
+
+.input-bar {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.button {
+  padding: 2px;
+}
+
+.button:hover {
+  background: teal;
+  cursor: pointer;
+}
+
+.note-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.notes {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
